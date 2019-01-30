@@ -1,32 +1,36 @@
-<mat-sidenav-container class="example-container">
+<nav class="main-menu">
+  <ul>
 
-  <mat-sidenav #sidenav class="sidenav" mode="side" opened>
-    <mat-icon>view_headline</mat-icon>
-    <mat-list>
-      <li>
-        <h3> Intro </h3>
-      </li>
-      <li *ngFor="let menu of menus">
-        <h3>{{ menu.number }}</h3>
-        <div *ngFor="let i=index; let menuSubTitle of menu.subTitle">
+    <li>
+      <a href="#">
+        <i class="material-icons">view_headline</i>
+      </a>
+    </li>
+    <li class="has-subnav" *ngFor="let menu of menus">
+      <a href="#">
+        <h3>
+          {{ menu.number }}
+        </h3>
+        <span class="nav-text">
+          {{ menu.title }}
+        </span>
+      </a>
+      <div *ngFor="let i=index; let menuSubTitle of menu.subTitle">
+        <a href="#">
           <h4>
-            {{ i | formatString: '-' }}
-            <span class="subTitle">
-              {{ menuSubTitle }}
-            </span>
+            {{ menuSubTitle.number }}
           </h4>
-        </div>
-      </li>
-      <li>
-        <h3> Conclusion </h3>
-      </li>
-    </mat-list>
-  </mat-sidenav>
+          <span class="nav-text">
+            {{ menuSubTitle.title }}
+          </span>
+        </a>
+      </div>
+    </li>
 
-  <mat-sidenav-content class="content">
-    <div>Main content</div>
-    <div>Main content</div>
+  </ul>
+</nav>
 
-  </mat-sidenav-content>
+<div class="container">
+  content
 
-</mat-sidenav-container>
+</div>

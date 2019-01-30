@@ -57,18 +57,36 @@ export class AppComponent implements OnInit {
         number: 'I',
         title: 'En quoi l\'utilisation des réseaux sociaux est un avantage pour faire de la propagande?',
         subTitle: [
-          'Les informations sont rapidement diffusées',
-          'Fake news',
-          'Encadrement insuffisant des lois',
+          {
+            number: '1.1',
+            title: 'Les informations sont rapidement diffusées'
+          },
+          {
+            number: '1.2',
+            title: 'Fake news'
+          },
+          {
+            number: '1.3',
+            title: 'Encadrement insuffisant des lois'
+          }
         ]
       },
       {
         number: 'II',
         title: 'Qu\'est-ce-qui freine cette propagande?',
         subTitle: [
-          '',
-          'Concurrence',
-          'L\'efficacité est-elle durable?',
+          {
+            number: '2.1',
+            title: ''
+          },
+          {
+            number: '2.2',
+            title: 'Concurrence'
+          },
+          {
+            number: '2.3',
+            title: 'L\'efficacité est-elle durable?'
+          }
         ]
       },
       {
