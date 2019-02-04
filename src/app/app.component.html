@@ -1,36 +1,3 @@
-<nav class="main-menu">
-  <ul>
+<app-side-menu></app-side-menu>
 
-    <li>
-      <a href="#">
-        <i class="material-icons">view_headline</i>
-      </a>
-    </li>
-    <li class="has-subnav" *ngFor="let menu of menus">
-      <a href="#">
-        <h3>
-          {{ menu.number }}
-        </h3>
-        <span class="nav-text">
-          {{ menu.title }}
-        </span>
-      </a>
-      <div *ngFor="let i=index; let menuSubTitle of menu.subTitle">
-        <a href="#">
-          <h4>
-            {{ menuSubTitle.number }}
-          </h4>
-          <span class="nav-text">
-            {{ menuSubTitle.title }}
-          </span>
-        </a>
-      </div>
-    </li>
-
-  </ul>
-</nav>
-
-<div class="container">
-  content
-
-</div>
+<router-outlet></router-outlet>

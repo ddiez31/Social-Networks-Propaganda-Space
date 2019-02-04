@@ -1,1 +1,121 @@
+.material-icons {
+  position: relative;
+  display: table-cell;
+  width: 60px;
+  height: 36px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 20px;
+}
 
+
+.main-menu:hover,
+nav.main-menu.expanded {
+  width: 50%;
+  overflow: visible;
+}
+
+.main-menu {
+  // border: 1px solid red;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  width: 95px;
+  margin-right: 1rem;
+  overflow: hidden;
+  transition: width .3s linear;
+}
+
+.main-menu>ul {
+  margin: 7px 0;
+}
+
+.main-menu li {
+  // border: 1px solid green;
+  position: relative;
+  display: block;
+
+  >div>a {
+    color: black;
+
+    h4 {
+      font-size: 14px;
+      margin-right: 3.8rem;
+      margin-left: 0.8rem;
+    }
+  }
+}
+
+.main-menu li>a,
+.main-menu li>div>a {
+  // border: 1px solid purple;
+  color: black;
+  position: relative;
+  display: table;
+  border-collapse: collapse;
+  border-spacing: 0;
+  text-decoration: none;
+  transition: all .3s linear;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  h3 {
+    font-size: 16px;
+    margin-right: 3.8rem;
+    margin-left: 0.8rem;
+  }
+}
+
+.main-menu .material-icons {
+  position: relative;
+  display: table-cell;
+  width: 60px;
+  height: 36px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.main-menu .nav-text {
+  position: relative;
+  display: table-cell;
+  white-space: nowrap;
+  padding-left: 1rem;
+  width: 100%;
+}
+
+.no-touch .scrollable.hover {
+  overflow-y: hidden;
+}
+
+.no-touch .scrollable.hover:hover {
+  overflow-y: auto;
+  overflow: visible;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+nav {
+  user-select: none;
+}
+
+nav ul,
+nav li {
+  outline: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.main-menu li>a:hover,
+.main-menu li>div>a:hover,
+nav.main-menu li.active>a,
+.no-touch .dashboard-page nav.dashboard-menu ul li:hover a,
+.dashboard-page nav.dashboard-menu ul li.active a {
+  color: white;
+  background-color: black;
+  transition: all 0.3s;
+}

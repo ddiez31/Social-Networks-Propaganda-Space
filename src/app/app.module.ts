@@ -1,11 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatNativeDateModule, MatButtonModule, MatSidenavModule, MatRadioModule, MatIconModule, MatListModule } from '@angular/material';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent, FormatStringPipe } from './app.component';
+import { AppComponent } from './app.component';
 import { SideMenuComponent } from './components/side-menu/side-menu.component';
 import { HomeComponent } from './components/home/home.component';
 
@@ -13,31 +11,14 @@ import { HomeComponent } from './components/home/home.component';
   declarations: [
     AppComponent,
     SideMenuComponent,
-    HomeComponent,
-    FormatStringPipe
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatRadioModule,
-    MatNativeDateModule,
-    ReactiveFormsModule,
-    FormsModule,
-    MatIconModule,
-    MatListModule
+    FormsModule
   ],
-  exports: [
-    MatButtonModule,
-    MatSidenavModule,
-    MatRadioModule,
-    MatNativeDateModule,
-    ReactiveFormsModule,
-    MatIconModule,
-    MatListModule
-  ],
+  exports: [],
   providers: [],
   bootstrap: [AppComponent]
 })
