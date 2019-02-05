@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Content } from './shared/content';
+import { ContentService } from './shared/content.service';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  title = 'Réseaux sociaux: un nouvel espace de propagande?'
+  contents: Content[];
 
-  constructor() { }
+  constructor(public contentService: ContentService) { }
 
   ngOnInit(): void {
+    this.getContent();
+  }
+
+  getContent(): void {
+    this.contents = this.contentService.loadContent();
   }
 
 }

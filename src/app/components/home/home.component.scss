@@ -1,4 +1,38 @@
 .container {
-  margin-left: 6rem;
-  font-size: 78px;
+  margin-left: 8rem;
+  // font-size: 30px;
+
+  .jumbotron {
+    background-image: url('./../../../assets/images/social-1148035_1920.jpg');
+    // background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+    display: flex;
+
+    .lead {
+      align-self: flex-end;
+      width: 100%;
+      text-align: center;
+
+      button {
+        width: 18vw;
+        height: 14vh;
+        background-color: white;
+        color: black;
+        border: none;
+        opacity: 0.9;
+        display: inline-grid;
+
+        &:hover {
+          color: gray;
+        }
+
+        &.focus,
+        &:focus {
+          box-shadow: none;
+        }
+      }
+    }
+  }
 }

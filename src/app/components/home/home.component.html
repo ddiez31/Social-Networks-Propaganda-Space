@@ -1,33 +1,30 @@
 <div class="container">
-  <p>
-    content
-  </p>
-  <p>
-    content
-  </p>
-  <p>
-    content
-  </p>
-  <p>
-    content
-  </p>
-  <p>
-    content
-  </p>
-  <p>
-    content
-  </p>
-  <p>
-    content
-  </p>
-  <p>
-    content
-  </p>
-  <p id="login">
-    content
-  </p>
-  <p>
-    content
-  </p>
+  <h1>{{ title }}</h1>
+
+  <div class="jumbotron">
+    <!-- <h1 class="display-4">Hello, world!</h1>
+    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
+      featured content or information.</p>
+    <hr class="my-4">
+    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p> -->
+    <p class="lead">
+      <button class="btn btn-primary btn-lg" routerLink="./" fragment="tag-0">
+        EXPLORE
+        <i class="material-icons"> keyboard_arrow_down </i>
+      </button>
+    </p>
+  </div>
+
+  <div *ngFor="let i = index; let content of contents">
+    <div id="tag-{{ i }}">
+      <p>{{ content.section }}</p>
+    </div>
+
+    <div *ngFor="let j = index; let subContent of content.subContent">
+      <div id="tag-{{ i }}_{{ j + 1 }}">
+        <p>{{ subContent.subSection }}</p>
+      </div>
+    </div>
+  </div>
 
 </div>

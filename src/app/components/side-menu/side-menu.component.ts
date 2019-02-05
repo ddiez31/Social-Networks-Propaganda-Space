@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Menu } from './shared/menu';
+import { SideMenuService } from './shared/side-menu.service';
 
 @Component({
   selector: 'app-side-menu',
@@ -9,55 +10,15 @@ import { Menu } from './shared/menu';
 export class SideMenuComponent implements OnInit {
   menus: Menu[];
 
-  constructor() { 
+  constructor(public sideMenuService: SideMenuService) { 
   }
 
   ngOnInit(): void {
-    this.menus = [
-      {
-        title: 'Introduction'
-      },
-      {
-        number: 'I',
-        title: 'En quoi l\'utilisation des réseaux sociaux est un avantage pour faire de la propagande?',
-        subTitle: [
-          {
-            number: '1.1',
-            title: 'Les informations sont rapidement diffusées'
-          },
-          {
-            number: '1.2',
-            title: 'Fake news'
-          },
-          {
-            number: '1.3',
-            title: 'Encadrement insuffisant des lois'
-          }
-        ]
-      },
-      {
-        number: 'II',
-        title: 'Qu\'est-ce-qui freine cette propagande?',
-        subTitle: [
-          {
-            number: '2.1',
-            title: ''
-          },
-          {
-            number: '2.2',
-            title: 'Concurrence'
-          },
-          {
-            number: '2.3',
-            title: 'L\'efficacité est-elle durable?'
-          }
-        ]
-      },
-      {
-        title: 'Conclusion'
-      },     
-    ];
+    this.getMenu();
+  }
 
+  getMenu(): void {
+    this.menus = this.sideMenuService.loadMenu();
   }
 
  

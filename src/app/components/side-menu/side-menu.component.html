@@ -3,12 +3,13 @@
 
     <li>
       <!-- <a [routerLink]="['/']" fragment="login"> -->
-      <a routerLink="./" fragment="login">
+      <!-- <a routerLink="./" fragment="login"> -->
+      <a routerLink="/" class="icon">
         <i class="material-icons">view_headline</i>
       </a>
     </li>
-    <li class="has-subnav" *ngFor="let menu of menus">
-      <a href="#">
+    <li class="has-subnav" *ngFor="let i = index; let menu of menus">
+      <a routerLink="./" fragment="tag-{{ i }}">
         <h3 *ngIf="menu.number">
           {{ menu.number }}
         </h3>
@@ -16,8 +17,8 @@
           {{ menu.title }}
         </span>
       </a>
-      <div *ngFor="let i=index; let menuSubTitle of menu.subTitle">
-        <a href="#">
+      <div *ngFor="let j = index; let menuSubTitle of menu.subTitle">
+        <a routerLink="./" fragment="tag-{{ i }}_{{ j + 1 }}">
           <h4>
             {{ menuSubTitle.number }}
           </h4>

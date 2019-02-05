@@ -1,4 +1,4 @@
-export interface Menu {
+export class Menu {
     number?: string;
     title: string;
     subTitle?: 
