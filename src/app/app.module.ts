@@ -8,12 +8,14 @@ import { SideMenuComponent } from './components/side-menu/side-menu.component';
 import { HomeComponent } from './components/home/home.component';
 import { SideMenuService } from './components/side-menu/shared/side-menu.service';
 import { ContentService } from './components/home/shared/content.service';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SideMenuComponent,
-    HomeComponent
+    HomeComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

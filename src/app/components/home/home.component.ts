@@ -8,7 +8,6 @@ import { ContentService } from './shared/content.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  title = 'Réseaux sociaux: un nouvel espace de propagande?'
   contents: Content[];
 
   constructor(public contentService: ContentService) { }

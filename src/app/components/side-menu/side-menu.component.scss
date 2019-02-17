@@ -15,7 +15,6 @@ nav.main-menu.expanded {
 }
 
 .main-menu {
-  // border: 1px solid red;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -28,7 +27,7 @@ nav.main-menu.expanded {
   background: white;
   border-right: 1px solid gray;
   opacity: 0.9;
-  z-index: 100;
+  z-index: 2000;
 }
 
 .main-menu>ul {
@@ -36,7 +35,6 @@ nav.main-menu.expanded {
 }
 
 .main-menu li {
-  // border: 1px solid green;
   position: relative;
   display: block;
 
@@ -53,7 +51,6 @@ nav.main-menu.expanded {
 
 .main-menu li>a,
 .main-menu li>div>a {
-  // border: 1px solid purple;
   color: black;
   position: relative;
   display: table;
