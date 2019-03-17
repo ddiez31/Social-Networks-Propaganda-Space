@@ -2,14 +2,12 @@
   <ul>
 
     <li>
-      <!-- <a [routerLink]="['/']" fragment="login"> -->
-      <!-- <a routerLink="./" fragment="login"> -->
-      <a routerLink="/" class="icon">
+      <a class="icon" (click)="scrollToTarget('.jumbotron')">
         <i class="material-icons">view_headline</i>
       </a>
     </li>
     <li class="has-subnav" *ngFor="let i = index; let menu of menus">
-      <a routerLink="./" fragment="tag-{{ i }}">
+      <a (click)="scrollToTarget('#tag-' + i)">
         <h3 *ngIf="menu.number">
           {{ menu.number }}
         </h3>
@@ -18,7 +16,7 @@
         </span>
       </a>
       <div *ngFor="let j = index; let menuSubTitle of menu.subTitle">
-        <a routerLink="./" fragment="tag-{{ i }}_{{ j + 1 }}">
+        <a (click)="scrollToTarget('#tag-' + i + '_' + (j+1))">
           <h4>
             {{ menuSubTitle.number }}
           </h4>

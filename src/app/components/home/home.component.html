@@ -1,8 +1,12 @@
 <div class="container">
 
-  <div class="jumbotron">
-    <p class="lead">
-      <button class="btn btn-primary btn-lg" routerLink="./" fragment="tag-0">
+  <!-- <div id="scene">
+    <div data-depth="0.2">My first Layer!</div>
+    <div data-depth="0.6">My second Layer!</div>
+  </div> -->
+  <div class="jumbotron" id="jumbotron">
+    <p class="lead" data-depth="0.2">
+      <button class="btn btn-primary btn-lg" (click)="scrollToTarget('#tag-0')">
         EXPLORE
         <i class="material-icons"> keyboard_arrow_down </i>
       </button>
@@ -16,6 +20,7 @@
       <a href="#" *ngIf="content.image"><img src="{{ content.image }}" /></a>
       <p>{{ content.section }}</p>
     </div>
+
     <div class="section"></div>
 
     <div *ngFor="let j = index; let subContent of content.subContent">

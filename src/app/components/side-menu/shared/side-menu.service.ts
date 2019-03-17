@@ -34,7 +34,7 @@ export class SideMenuService {
       subTitle: [
         {
           number: '2.1',
-          title: ''
+          title: 'Les risques de la communication'
         },
         {
           number: '2.2',

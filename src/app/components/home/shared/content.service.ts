@@ -43,7 +43,7 @@ export class ContentService {
       subContent: [
         {
           number: '2.1',
-          title: 'gtrgtgrt',
+          title: 'Les risques de la communication',
           subSection: 'Primi igitur omnium statuuntur Epigonus et Eusebius ob nominum gentilitatem oppressi. praediximus enim Montium sub ipso vivendi termino his vocabulis appellatos fabricarum culpasse tribunos ut adminicula futurae molitioni pollicitos.'
         },
         {
