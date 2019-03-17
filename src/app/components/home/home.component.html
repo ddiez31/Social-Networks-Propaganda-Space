@@ -1,9 +1,5 @@
 <div class="container">
 
-  <!-- <div id="scene">
-    <div data-depth="0.2">My first Layer!</div>
-    <div data-depth="0.6">My second Layer!</div>
-  </div> -->
   <div class="jumbotron" id="jumbotron">
     <p class="lead" data-depth="0.2">
       <button class="btn btn-primary btn-lg" (click)="scrollToTarget('#tag-0')">
@@ -17,18 +13,30 @@
     <div class="section"></div>
     <div class="tag" id="tag-{{ i }}">
       <h3><span *ngIf="content.number">{{ content.number }}. </span>{{ content.title }}</h3>
-      <a href="#" *ngIf="content.image"><img src="{{ content.image }}" /></a>
-      <p>{{ content.section }}</p>
+      <a *ngIf="content.image"><img src="{{ content.image }}" /></a>
+      <p class="contentSection">{{ content.section }}</p>
     </div>
-
     <div class="section"></div>
 
     <div *ngFor="let j = index; let subContent of content.subContent">
       <div class="tag" id="tag-{{ i }}_{{ j + 1 }}">
         <h4>{{ subContent.number }}. {{ subContent.title }}</h4>
-        <p>{{ subContent.subSection }}</p>
+        <div *ngFor="let subSection of subContent.subSection">
+          <ul>
+            <li>{{ subSection }}</li>
+          </ul>
+        </div>
       </div>
     </div>
+  </div>
+
+  <div class="jumbotron" id="bottom">
+    <p class="lead" data-depth="0.2">
+      <button class="btn btn-primary btn-lg" (click)="scrollToTarget('#jumbotron')">
+        Back to top
+        <i class="material-icons"> keyboard_arrow_up </i>
+      </button>
+    </p>
   </div>
 
 </div>

@@ -1,28 +1,19 @@
-<!doctype html>
-<html lang="en">
+/* -----------------------------------------------
+/* How to use? : Check the GitHub README
+/* ----------------------------------------------- */
 
-<head>
-  <meta charset="utf-8">
-  <title>Réseaux sociaux: Espace propagande?</title>
-  <base href="/">
+/* To load a config file (particles.json) you need to host this demo (MAMP/WAMP/local)... */
+/*
+particlesJS.load('particles-js', 'particles.json', function() {
+  console.log('particles.js loaded - callback');
+});
+*/
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico?any=param">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
+/* Otherwise just put the config content (json): */
 
-<body>
-
-  <div id="particles-js"></div>
-
-  <app-root></app-root>
-
-</body>
-
-<script src="./assets/particlesjs/particles.js"></script>
-<script>
-  particlesJS("particles-js", {
+particlesJS('particles-js',
+  
+  {
     "particles": {
       "number": {
         "value": 80,
@@ -32,16 +23,21 @@
         }
       },
       "color": {
-        "value": "#808080"
+        "value": "#ffffff"
       },
       "shape": {
         "type": "circle",
         "stroke": {
           "width": 0,
-          "color": "#808080"
+          "color": "#000000"
         },
         "polygon": {
           "nb_sides": 5
+        },
+        "image": {
+          "src": "img/github.svg",
+          "width": 100,
+          "height": 100
         }
       },
       "opacity": {
@@ -55,10 +51,10 @@
         }
       },
       "size": {
-        "value": 3,
+        "value": 5,
         "random": true,
         "anim": {
-          "enable": true,
+          "enable": false,
           "speed": 40,
           "size_min": 0.1,
           "sync": false
@@ -67,8 +63,8 @@
       "line_linked": {
         "enable": true,
         "distance": 150,
-        "color": "#808080",
-        "opacity": 0.3,
+        "color": "#ffffff",
+        "opacity": 0.4,
         "width": 1
       },
       "move": {
@@ -78,9 +74,8 @@
         "random": false,
         "straight": false,
         "out_mode": "out",
-        "bounce": false,
         "attract": {
-          "enable": true,
+          "enable": false,
           "rotateX": 600,
           "rotateY": 1200
         }
@@ -91,7 +86,7 @@
       "events": {
         "onhover": {
           "enable": true,
-          "mode": "grab"
+          "mode": "repulse"
         },
         "onclick": {
           "enable": true,
@@ -101,9 +96,9 @@
       },
       "modes": {
         "grab": {
-          "distance": 250,
+          "distance": 400,
           "line_linked": {
-            "opacity": 0.8
+            "opacity": 1
           }
         },
         "bubble": {
@@ -114,8 +109,7 @@
           "speed": 3
         },
         "repulse": {
-          "distance": 200,
-          "duration": 0.4
+          "distance": 200
         },
         "push": {
           "particles_nb": 4
@@ -125,9 +119,15 @@
         }
       }
     },
-    "retina_detect": true
-  });
+    "retina_detect": true,
+    "config_demo": {
+      "hide_card": false,
+      "background_color": "#b61924",
+      "background_image": "",
+      "background_position": "50% 50%",
+      "background_repeat": "no-repeat",
+      "background_size": "cover"
+    }
+  }
 
-</script>
-
-</html>
+);

@@ -44,7 +44,6 @@ export class HomeComponent implements OnInit {
       pointerEvents: true
     });
     // parallaxInstance.friction(0.2, 0.2);
-
   }
 
 

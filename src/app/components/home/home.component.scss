@@ -3,11 +3,18 @@
   margin-top: 6rem;
 
   .jumbotron {
-    background-image: url('./../../../assets/images/social-media-3758364_1280.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 90vh;
-    display: flex;
+    &#jumbotron {
+      background-image: url('./../../../assets/images/social-media-3758364_1280.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 90vh;
+      display: flex;
+    }
+
+    &#bottom {
+      background-color: transparent;
+      margin-top: -17rem;
+    }
 
     .lead {
       align-self: flex-end;
@@ -42,6 +49,10 @@
   .tag {
     padding-top: 3rem;
 
+    .contentSection {
+      text-align: justify;
+    }
+
     h3 {
       text-align: center;
     }
@@ -51,6 +62,7 @@
       height: 90vh;
       margin-top: 1rem;
       margin-bottom: 1rem;
+      position: relative;
     }
 
   }
