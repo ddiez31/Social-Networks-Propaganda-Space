@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject, OnInit, HostListener } from '@angular/core';
 import { Content } from './shared/content';
 import { ContentService } from './shared/content.service';
 import { DOCUMENT } from '@angular/common';
@@ -36,16 +36,20 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.getContent();
     const jumbotron = document.getElementById('jumbotron');
-    const input = document.getElementById('jumbotron');
-    const btn = document.getElementById('btn');
+    const bottom = document.getElementById('bottom');
     const parallaxInstance = new Parallax(jumbotron, {
       relativeInput: true,
       hoverOnly: true,
       pointerEvents: true
     });
+    const parallaxInstance2 = new Parallax(bottom, {
+      relativeInput: true,
+      hoverOnly: true,
+      pointerEvents: true
+    });
     // parallaxInstance.friction(0.2, 0.2);
-  }
 
+  }
 
   getContent(): void {
     this.contents = this.contentService.loadContent();
@@ -59,6 +63,7 @@ export class HomeComponent implements OnInit {
       easingLogic: this.myEasing
     });
   }
+
 
 }
 

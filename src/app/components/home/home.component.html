@@ -12,7 +12,7 @@
   <div *ngFor="let i = index; let content of contents">
     <div class="section"></div>
     <div class="tag" id="tag-{{ i }}">
-      <h3><span *ngIf="content.number">{{ content.number }}. </span>{{ content.title }}</h3>
+      <h1><span *ngIf="content.number">{{ content.number }}. </span>{{ content.title }}</h1>
       <a *ngIf="content.image"><img src="{{ content.image }}" /></a>
       <p class="contentSection">{{ content.section }}</p>
     </div>
@@ -20,7 +20,7 @@
 
     <div *ngFor="let j = index; let subContent of content.subContent">
       <div class="tag" id="tag-{{ i }}_{{ j + 1 }}">
-        <h4>{{ subContent.number }}. {{ subContent.title }}</h4>
+        <h2>{{ subContent.number }}. {{ subContent.title }}</h2>
         <div *ngFor="let subSection of subContent.subSection">
           <ul>
             <li>{{ subSection }}</li>
